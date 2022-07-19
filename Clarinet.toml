@@ -1,0 +1,24 @@
+[project]
+name = "stacks-seoul-2022"
+authors = ["stacks-seoul-2022-dev"]
+description = ""
+telemetry = true
+requirements = []
+analysis = ["check_checker"]
+costs_version = 2
+
+[contracts.stacks-seoul-2022]
+path = "contracts/stacks-seoul-2022.clar"
+depends_on = ["nft-trait", "commission-trait"]
+
+[contracts.nft-trait]
+path = "contracts/external/nft-trait.clar"
+depends_on = []
+
+[contracts.commission-trait]
+path = "contracts/external/commission-trait.clar"
+depends_on = []
+
+[contracts.stacks-seoul-2022-commission]
+path = "contracts/external/stacks-seoul-2022-commission.clar"
+depends_on = []
