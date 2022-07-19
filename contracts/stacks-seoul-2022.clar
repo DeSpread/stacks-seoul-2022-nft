@@ -1,13 +1,13 @@
 ;; stacks-seoul-2022
 
-(impl-trait 'SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait.nft-trait)
+(impl-trait .nft-trait.nft-trait)
 
 (define-non-fungible-token stacks-seoul-2022 uint)
 
 ;; Constants
 (define-constant DEPLOYER tx-sender)
 (define-constant COMM u1000)
-(define-constant COMM-ADDR 'SPNWZ5V2TPWGQGVDR6T7B6RQ4XMGZ4PXTEE0VQ0S)
+(define-constant COMM-ADDR 'ST23A2GCTPDDN32QXMYKBWJVKDDYJ2BYKBNHHVBDV)
 
 (define-constant ERR-NO-MORE-NFTS u100)
 (define-constant ERR-NOT-ENOUGH-PASSES u101)
@@ -28,7 +28,7 @@
 (define-data-var mint-limit uint u100000)
 (define-data-var last-id uint u1)
 (define-data-var total-price uint u0000000)
-(define-data-var artist-address principal 'SP1XPG9QFX5M95G36SGN9R8YJ4KJ0JB7ZXNH892N6)
+(define-data-var artist-address principal 'ST23A2GCTPDDN32QXMYKBWJVKDDYJ2BYKBNHHVBDV)
 (define-data-var ipfs-root (string-ascii 80) "ipfs://ipfs/QmWJFVsx14G69QyaAqscdSuVXnKPE78Xg3uKW2jxD8j3MF/")
 (define-data-var mint-paused bool true)
 (define-data-var premint-enabled bool false)
@@ -81,7 +81,7 @@
 (define-private (mint-many-iter (ignore bool) (next-id uint))
   (if (<= next-id (var-get mint-limit))
     (begin
-      (unwrap! (nft-mint? bitcoin-unleashed-2022 next-id tx-sender) next-id)
+      (unwrap! (nft-mint? stacks-seoul-2022 next-id tx-sender) next-id)
       (+ next-id u1)    
     )
     next-id))
@@ -110,10 +110,10 @@
 (define-public (burn (token-id uint))
   (begin 
     (asserts! (is-owner token-id tx-sender) (err ERR-NOT-AUTHORIZED))
-    (nft-burn? bitcoin-unleashed-2022 token-id tx-sender)))
+    (nft-burn? stacks-seoul-2022 token-id tx-sender)))
 
 (define-private (is-owner (token-id uint) (user principal))
-    (is-eq user (unwrap! (nft-get-owner? bitcoin-unleashed-2022 token-id) false)))
+    (is-eq user (unwrap! (nft-get-owner? stacks-seoul-2022 token-id) false)))
 
 (define-public (set-base-uri (new-base-uri (string-ascii 80)))
   (begin
@@ -137,7 +137,7 @@
 
 ;; read-only functions
 (define-read-only (get-owner (token-id uint))
-  (ok (nft-get-owner? bitcoin-unleashed-2022 token-id)))
+  (ok (nft-get-owner? stacks-seoul-2022 token-id)))
 
 (define-read-only (get-last-token-id)
   (ok (- (var-get last-id) u1)))
@@ -169,7 +169,7 @@
     (map-get? token-count account)))
 
 (define-private (trnsfr (id uint) (sender principal) (recipient principal))
-  (match (nft-transfer? bitcoin-unleashed-2022 id sender recipient)
+  (match (nft-transfer? stacks-seoul-2022 id sender recipient)
     success
       (let
         ((sender-balance (get-balance sender))
@@ -184,7 +184,7 @@
     error (err error)))
 
 (define-private (is-sender-owner (id uint))
-  (let ((owner (unwrap! (nft-get-owner? bitcoin-unleashed-2022 id) false)))
+  (let ((owner (unwrap! (nft-get-owner? stacks-seoul-2022 id) false)))
     (or (is-eq tx-sender owner) (is-eq contract-caller owner))))
 
 (define-read-only (get-listing-in-ustx (id uint))
@@ -205,7 +205,7 @@
     (ok true)))
 
 (define-public (buy-in-ustx (id uint) (comm-trait <commission-trait>))
-  (let ((owner (unwrap! (nft-get-owner? bitcoin-unleashed-2022 id) (err ERR-NOT-FOUND)))
+  (let ((owner (unwrap! (nft-get-owner? stacks-seoul-2022 id) (err ERR-NOT-FOUND)))
       (listing (unwrap! (map-get? market id) (err ERR-LISTING)))
       (price (get price listing)))
     (asserts! (is-eq (contract-of comm-trait) (get commission listing)) (err ERR-WRONG-COMMISSION))
