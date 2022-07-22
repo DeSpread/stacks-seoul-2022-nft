@@ -25,7 +25,7 @@
 (define-constant ERR-NO-MORE-MINTS u113)
 
 ;; Internal variables
-(define-data-var mint-limit uint u100000)
+(define-data-var mint-limit uint u1000)
 (define-data-var last-id uint u1)
 (define-data-var total-price uint u0000000)
 (define-data-var artist-address principal 'ST3W8SJ7X5X980KKKQ66C1Z09APFDQTZGKMH2FD8Z)
