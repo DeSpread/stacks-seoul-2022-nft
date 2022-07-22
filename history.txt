@@ -12,3 +12,7 @@
 (contract-call? .citycats-nft mint)
 (contract-call? .citycats-nft mint 'ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM)
 (contract-call? .citycats-nft treasure-mint 'ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM)
+(contract-call? .stacks-seoul-2022 claim)
+(contract-call? .stacks-seoul-2022 get-last-token-id)
+(contract-call? .stacks-seoul-2022 get-token-uri u3)
+(contract-call? .stacks-seoul-2022 get-token-uri u3)c
