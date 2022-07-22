@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "name": `Stacks Seoul #1`,
+  "description": `This is #1 a collection of exclusive NFT for Stacks Seoul 2022`,
+  "external_url": "https://meetup-seoul.stacks.despread.io",
+  "image": "ipfs://QmP51qhovXJv28jZrZuUm7afSH5tKPhfhawY3aDPNw4ygn",
+  "attributes": [{
+      "trait_type": "Location",
+      "value": "Seoul"
+  }]
+}

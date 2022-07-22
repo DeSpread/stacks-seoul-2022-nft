@@ -29,7 +29,7 @@
 (define-data-var last-id uint u1)
 (define-data-var total-price uint u0000000)
 (define-data-var artist-address principal 'ST3W8SJ7X5X980KKKQ66C1Z09APFDQTZGKMH2FD8Z)
-(define-data-var ipfs-root (string-ascii 80) "ipfs://ipfs/QmWJFVsx14G69QyaAqscdSuVXnKPE78Xg3uKW2jxD8j3MF/")
+(define-data-var ipfs-root (string-ascii 80) "ipfs://QmUiWoGH7VGnxykQ4Zi1zQiDHzc5xAjCKxuGHUQaNysAUP/")
 (define-data-var mint-paused bool true)
 (define-data-var premint-enabled bool false)
 (define-data-var sale-enabled bool false)
