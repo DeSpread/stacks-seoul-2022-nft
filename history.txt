@@ -16,3 +16,48 @@
 (contract-call? .stacks-seoul-2022 get-last-token-id)
 (contract-call? .stacks-seoul-2022 get-token-uri u3)
 (contract-call? .stacks-seoul-2022 get-token-uri u3)c
+(contract-call? .stacks-seoul-2022 claim)
+(contract-call? .stacks-seoul-2022 get-last-token-id)
+(contract-call? .stacks-seoul-2022 get-token-uri u3)
+(contract-call? .stacks-seoul-2022 get-last-token-id)
+(contract-call? .stacks-seoul-2022 claim)
+(contract-call? .stacks-seoul-2022 get-last-token-id)
+(contract-call? .stacks-seoul-2022 get-token-uri u12)
+(contract-call? .stacks-seoul-2022 get-token-uri u13)
+(contract-call? .stacks-seoul-2022 get-token-uri u15)
+(contract-call? .stacks-seoul-2022 get-token-uri u13)
+(contract-call? .stacks-seoul-2022 get-token-uri u11)
+(contract-call? .stacks-seoul-2022 get-token-uri u1000)
+help
+;;help
+help;;
+help
+::help
+set_tx_sender STNHKEPYEPJ8ET55ZZ0M5A34J0R3N5FM2CMMMAZ6
+set_tx_sender 'STNHKEPYEPJ8ET55ZZ0M5A34J0R3N5FM2CMMMAZ6
+set_tx_sender STNHKEPYEPJ8ET55ZZ0M5A34J0R3N5FM2CMMMAZ6
+set_tx_sender 'STNHKEPYEPJ8ET55ZZ0M5A34J0R3N5FM2CMMMAZ6
+set_tx_sender 'STNHKEPYEPJ8ET55ZZ0M5A34J0R3N5FM2CMMMAZ6'
+set_tx_sender
+::set_tx_sender STNHKEPYEPJ8ET55ZZ0M5A34J0R3N5FM2CMMMAZ6
+get assets_maps
+::get_assets_maps
+::help
+::get_contracts
+::help
+(contract-call? .stacks-seoul-2022 claim)
+(contract-call? ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 claim)
+(contract-call? ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 .claim)
+(contract-call? ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022)
+::help
+::list_functions
+::get_contracts
+(contract-call? ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 claim)
+(contract-call? ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM .stacks-seoul-2022 claim)
+(contract-call? ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 claim)
+(ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 claim)
+(contract-call? ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 claim)
+(contract-call? ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022.claim)
+(contract-call? ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 \\claim)
+(contract-call? 'ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 claim)
+::help
