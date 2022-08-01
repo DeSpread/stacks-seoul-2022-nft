@@ -61,3 +61,17 @@ get assets_maps
 (contract-call? ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 \\claim)
 (contract-call? 'ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 claim)
 ::help
+(contract-call? .stacks-seoul-2022 toggle-paused)
+(contract-call? .stacks-seoul-2022 toggle-pause)
+(contract-call? 'ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 get-pause)
+(contract-call? 'ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 get-paused)
+::help
+::set_tx_sender STNHKEPYEPJ8ET55ZZ0M5A34J0R3N5FM2CMMMAZ6
+get_assets_maps
+::get_assets_maps
+(contract-call? .stacks-seoul-2022 claim)
+(contract-call? ‘ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 claim)
+(contract-call? 'ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-seoul-2022 claim)
+::set_tx_sender ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+(contract-call? stacks-seoul-2022 set-mint-cap u10)
+(contract-call? .stacks-seoul-2022 set-mint-cap u10)

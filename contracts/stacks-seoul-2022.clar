@@ -96,6 +96,11 @@
     (asserts! (or (is-eq tx-sender (var-get artist-address)) (is-eq tx-sender DEPLOYER)) (err ERR-INVALID-USER))
     (ok (var-set total-price price))))
 
+(define-public (set-mint-cap (cap uint))
+  (begin
+    (asserts! (or (is-eq tx-sender (var-get artist-address)) (is-eq tx-sender DEPLOYER)) (err ERR-INVALID-USER))
+    (ok (var-set mint-cap cap))))
+
 (define-public (toggle-pause)
   (begin
     (asserts! (or (is-eq tx-sender (var-get artist-address)) (is-eq tx-sender DEPLOYER)) (err ERR-INVALID-USER))
@@ -144,6 +149,9 @@
 
 (define-read-only (get-token-uri (token-id uint))
   (ok (some (concat (concat (var-get ipfs-root) (uint-to-string token-id)) ".json"))))
+
+(define-read-only (get-mint-cap)
+  (ok (var-get mint-cap)))
 
 (define-read-only (get-paused)
   (ok (var-get mint-paused)))
