@@ -7,7 +7,7 @@
 ;; Constants
 (define-constant DEPLOYER tx-sender)
 (define-constant COMM u1000)
-(define-constant COMM-ADDR 'ST3W8SJ7X5X980KKKQ66C1Z09APFDQTZGKMH2FD8Z)
+(define-constant COMM-ADDR 'SP2BV0D9K8VERSN1RFBF00WPT4WDYVJC3YQK18D1Q)
 
 (define-constant ERR-NO-MORE-NFTS u100)
 (define-constant ERR-NOT-ENOUGH-PASSES u101)
@@ -28,7 +28,7 @@
 (define-data-var mint-limit uint u200)
 (define-data-var last-id uint u1)
 (define-data-var total-price uint u0000000)
-(define-data-var artist-address principal 'ST3W8SJ7X5X980KKKQ66C1Z09APFDQTZGKMH2FD8Z)
+(define-data-var artist-address principal 'SP2BV0D9K8VERSN1RFBF00WPT4WDYVJC3YQK18D1Q)
 (define-data-var ipfs-root (string-ascii 80) "ipfs://QmYUJPdtpcecmGD9X6nzxGcLxkBsMm8XK4wb4piLT3pCHs/")
 (define-data-var mint-paused bool true)
 (define-data-var premint-enabled bool false)
