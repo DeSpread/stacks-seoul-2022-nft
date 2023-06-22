@@ -90,3 +90,8 @@ ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.stacks-3ridge-seoul-meetup-2023
 (contract-call? .stacks-3ridge-seoul-meetup-2023 mint (list true true))
 (contract-call? .stacks-3ridge-seoul-meetup-2023 mint (list true true true true true))
 (contract-call? .stacks-3ridge-seoul-meetup-2023 get-token-uri u3)
+(contract-call? .stacks-3ridge-seoul-meetup-2023 pre-claim)
+(contract-call? .stacks-3ridge-seoul-meetup-2023.pre-claim)
+(contract-call? .stacks-3ridge-seoul-meetup-2023 pre-claim)
+(contract-call? .stacks-3ridge-seoul-meetup-2023 get-owner u0)
+(contract-call? .stacks-3ridge-seoul-meetup-2023 get-owner u1)
