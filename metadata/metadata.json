@@ -1,11 +1,10 @@
 {
-  "id": 1,
-  "name": `Stacks Seoul #1`,
-  "description": `This is #1 a collection of exclusive NFT for Stacks Seoul 2022`,
-  "external_url": "https://meetup-seoul.stacks.despread.io",
-  "image": "ipfs://QmP51qhovXJv28jZrZuUm7afSH5tKPhfhawY3aDPNw4ygn",
-  "attributes": [{
-      "trait_type": "Location",
-      "value": "Seoul"
-  }]
+	"name": "3ridge Stacks Seoul Meetup 2023",
+	"description": "This is a collection of exclusive NFT for 3ridge Stacks Seoul Meetup 2023",
+	"external_url": "https://3ridge.io/event/6445ef8e7cf8560dd56dafc3",
+	"image": "ipfs://QmUz2QNYaECk9FQG9qjAfQ9jst1ggzNisPamdy1vwjYR8H",
+	"attributes": [{
+		"trait_type": "Location",
+		"value": "Seoul"
+	}]
 }

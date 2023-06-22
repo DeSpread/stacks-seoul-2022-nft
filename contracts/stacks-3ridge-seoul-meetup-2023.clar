@@ -1,13 +1,13 @@
-;; stacks-seoul-2022
+;; stacks-3ridge-seoul-meetup-2023
 
 (impl-trait .nft-trait.nft-trait)
 
-(define-non-fungible-token stacks-seoul-2022 uint)
+(define-non-fungible-token stacks-3ridge-seoul-meetup-2023 uint)
 
 ;; Constants
 (define-constant DEPLOYER tx-sender)
 (define-constant COMM u1000)
-(define-constant COMM-ADDR 'SP2BV0D9K8VERSN1RFBF00WPT4WDYVJC3YQK18D1Q)
+(define-constant COMM-ADDR 'SPBGN2NDFZ1PT6TFV6127F53KCP9HHHEB8JHYS34)
 
 (define-constant ERR-NO-MORE-NFTS u100)
 (define-constant ERR-NOT-ENOUGH-PASSES u101)
@@ -28,8 +28,9 @@
 (define-data-var mint-limit uint u200)
 (define-data-var last-id uint u1)
 (define-data-var total-price uint u0000000)
-(define-data-var artist-address principal 'SP2BV0D9K8VERSN1RFBF00WPT4WDYVJC3YQK18D1Q)
-(define-data-var ipfs-root (string-ascii 80) "ipfs://QmYUJPdtpcecmGD9X6nzxGcLxkBsMm8XK4wb4piLT3pCHs/")
+(define-data-var artist-address principal 'SPBGN2NDFZ1PT6TFV6127F53KCP9HHHEB8JHYS34)
+(define-data-var ipfs-root (string-ascii 80) "ipfs://Qmegbw6yrxx412hfTgPmHXNoUo1YjWvXSXAb4FahScdrRF/")
+
 (define-data-var mint-paused bool true)
 (define-data-var premint-enabled bool false)
 (define-data-var sale-enabled bool false)
@@ -44,7 +45,7 @@
   (mint (list true)))
 
 ;; Default Minting
-(define-private (mint (orders (list 25 bool)))
+(define-public (mint (orders (list 25 bool)))
   (mint-many orders))
 
 (define-private (mint-many (orders (list 25 bool )))  
@@ -81,7 +82,7 @@
 (define-private (mint-many-iter (ignore bool) (next-id uint))
   (if (<= next-id (var-get mint-limit))
     (begin
-      (unwrap! (nft-mint? stacks-seoul-2022 next-id tx-sender) next-id)
+      (unwrap! (nft-mint? stacks-3ridge-seoul-meetup-2023 next-id tx-sender) next-id)
       (+ next-id u1)    
     )
     next-id))
@@ -115,10 +116,10 @@
 (define-public (burn (token-id uint))
   (begin 
     (asserts! (is-owner token-id tx-sender) (err ERR-NOT-AUTHORIZED))
-    (nft-burn? stacks-seoul-2022 token-id tx-sender)))
+    (nft-burn? stacks-3ridge-seoul-meetup-2023 token-id tx-sender)))
 
 (define-private (is-owner (token-id uint) (user principal))
-    (is-eq user (unwrap! (nft-get-owner? stacks-seoul-2022 token-id) false)))
+    (is-eq user (unwrap! (nft-get-owner? stacks-3ridge-seoul-meetup-2023 token-id) false)))
 
 (define-public (set-base-uri (new-base-uri (string-ascii 80)))
   (begin
@@ -142,13 +143,13 @@
 
 ;; read-only functions
 (define-read-only (get-owner (token-id uint))
-  (ok (nft-get-owner? stacks-seoul-2022 token-id)))
+  (ok (nft-get-owner? stacks-3ridge-seoul-meetup-2023 token-id)))
 
 (define-read-only (get-last-token-id)
   (ok (- (var-get last-id) u1)))
 
 (define-read-only (get-token-uri (token-id uint))
-  (ok (some (concat (concat (var-get ipfs-root) (uint-to-string token-id)) ".json"))))
+  (ok (some (concat (concat (var-get ipfs-root) "metadata") ".json"))))
 
 (define-read-only (get-mint-cap)
   (ok (var-get mint-cap)))
@@ -177,7 +178,7 @@
     (map-get? token-count account)))
 
 (define-private (trnsfr (id uint) (sender principal) (recipient principal))
-  (match (nft-transfer? stacks-seoul-2022 id sender recipient)
+  (match (nft-transfer? stacks-3ridge-seoul-meetup-2023 id sender recipient)
     success
       (let
         ((sender-balance (get-balance sender))
@@ -192,7 +193,7 @@
     error (err error)))
 
 (define-private (is-sender-owner (id uint))
-  (let ((owner (unwrap! (nft-get-owner? stacks-seoul-2022 id) false)))
+  (let ((owner (unwrap! (nft-get-owner? stacks-3ridge-seoul-meetup-2023 id) false)))
     (or (is-eq tx-sender owner) (is-eq contract-caller owner))))
 
 (define-read-only (get-listing-in-ustx (id uint))
@@ -213,7 +214,7 @@
     (ok true)))
 
 (define-public (buy-in-ustx (id uint) (comm-trait <commission-trait>))
-  (let ((owner (unwrap! (nft-get-owner? stacks-seoul-2022 id) (err ERR-NOT-FOUND)))
+  (let ((owner (unwrap! (nft-get-owner? stacks-3ridge-seoul-meetup-2023 id) (err ERR-NOT-FOUND)))
       (listing (unwrap! (map-get? market id) (err ERR-LISTING)))
       (price (get price listing)))
     (asserts! (is-eq (contract-of comm-trait) (get commission listing)) (err ERR-WRONG-COMMISSION))

@@ -9,26 +9,26 @@ plan:
     - id: 0
       transactions:
         - contract-publish:
-            contract-name: nft-trait
-            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
-            cost: 4670
-            path: contracts/external/nft-trait.clar
-            anchor-block-only: true
-        - contract-publish:
             contract-name: commission-trait
             expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
             cost: 700
             path: contracts/external/commission-trait.clar
             anchor-block-only: true
         - contract-publish:
-            contract-name: stacks-seoul-2022-commission
+            contract-name: stacks-3ridge-seoul-meetup-2023-commission
             expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
             cost: 740
-            path: contracts/external/stacks-seoul-2022-commission.clar
+            path: contracts/external/stacks-3ridge-seoul-meetup-2023-commission.clar
             anchor-block-only: true
         - contract-publish:
-            contract-name: stacks-seoul-2022
+            contract-name: nft-trait
             expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
-            cost: 92980
-            path: contracts/stacks-seoul-2022.clar
+            cost: 4670
+            path: contracts/external/nft-trait.clar
+            anchor-block-only: true
+        - contract-publish:
+            contract-name: stacks-3ridge-seoul-meetup-2023
+            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            cost: 94850
+            path: contracts/stacks-3ridge-seoul-meetup-2023.clar
             anchor-block-only: true

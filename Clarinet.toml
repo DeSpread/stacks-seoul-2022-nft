@@ -1,14 +1,14 @@
 [project]
-name = "stacks-seoul-2022"
-authors = ["stacks-seoul-2022-dev"]
+name = "stacks-3ridge-seoul-meetup-2023"
+authors = ["stacks-3ridge-seoul-meetup-2023-dev"]
 description = ""
 telemetry = true
 requirements = []
 analysis = ["check_checker"]
 costs_version = 2
 
-[contracts.stacks-seoul-2022]
-path = "contracts/stacks-seoul-2022.clar"
+[contracts.stacks-3ridge-seoul-meetup-2023]
+path = "contracts/stacks-3ridge-seoul-meetup-2023.clar"
 depends_on = ["nft-trait", "commission-trait"]
 
 [contracts.nft-trait]
@@ -19,6 +19,6 @@ depends_on = []
 path = "contracts/external/commission-trait.clar"
 depends_on = []
 
-[contracts.stacks-seoul-2022-commission]
-path = "contracts/external/stacks-seoul-2022-commission.clar"
+[contracts.stacks-seoul-meetup-2023-commission]
+path = "contracts/external/stacks-seoul-meetup-2023-commission.clar"
 depends_on = []
