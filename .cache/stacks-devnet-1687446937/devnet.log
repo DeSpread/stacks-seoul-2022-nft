@@ -1,0 +1,32 @@
+Jun 22 15:15:38.326 INFO Checking contracts
+Jun 22 15:15:38.345 INFO Starting Devnet
+Jun 22 15:15:38.348 INFO Initiating Devnet boot sequence (working_dir: /Users/cryptogang/develop/git/stacks-seoul-2022-nft/.cache/stacks-devnet-1687446937)
+Jun 22 15:15:38.349 INFO Creating network stacks-3ridge-seoul-meetup-2023.devnet
+Jun 22 15:15:38.350 INFO Starting bitcoin-node
+Jun 22 15:15:47.158 INFO Created container bitcoin-node: a8115c2e865d7f431935209cf8dd323639d081be5603fd1cfbef86c432fa8f2b
+Jun 22 15:15:47.887 INFO Configuring bitcoin-node
+Jun 22 15:15:48.906 INFO Waiting for bitcoin-node
+Jun 22 15:15:49.286 INFO Registering addr(n3GRiDLKWuKLCw1DZmV75W1mE35qmW2tQm)#dm832d0a
+Jun 22 15:15:49.349 INFO Registering addr(mjSrB3wS4xab3kYqFktwBzfTdPg367ZJ2d)#kdxvqwc5
+Jun 22 15:15:49.970 INFO Registering addr(mqVnk6NPRdhntvfm4hh9vvjiRkFDUuSYsH)#ypxkdrsq
+Jun 22 15:15:50.195 INFO Registering addr(mr1iPkD9N3RJZZxXRk7xF9d36gffa6exNC)#n3uhsuqz
+Jun 22 15:15:50.373 INFO Registering addr(muYdXKmX9bByAueDe6KFfHd5Ff1gdN9ErG)#0ayck9fm
+Jun 22 15:15:50.534 INFO Registering addr(mvZtbibDAAA3WLpY7zXXFqRa3T4XSknBX7)#hkf7ujwt
+Jun 22 15:15:50.681 INFO Registering addr(mg1C76bNTutiCDV3t9nWhZs3Dc8LzUufj8)#gtqjph77
+Jun 22 15:15:50.828 INFO Registering addr(mweN5WVqadScHdA81aATSdcVr4B6dNokqx)#qz3ysrq0
+Jun 22 15:15:50.988 INFO Registering addr(mzxXgV6e4BZSsz8zVHm3TmqbECt7mbuErt)#pnqz0pm8
+Jun 22 15:15:51.156 INFO Registering addr(n37mwmru2oaVosgfuvzBwgV2ysCQRrLko7)#lh2paj0q
+Jun 22 15:15:51.337 INFO Registering addr(n2v875jbJ4RjBnTjgbfikDfnwsDV5iUByw)#8606llct
+Jun 22 15:15:51.494 INFO Registering addr(mjSrB3wS4xab3kYqFktwBzfTdPg367ZJ2d)#kdxvqwc5
+Jun 22 15:15:51.731 INFO Starting postgres
+Jun 22 15:16:06.303 INFO Created container postgres: fd05cdc006499c36da2465c2d103f937969eeb80b5c622c9f6e1204e1e7796b7
+Jun 22 15:16:06.634 INFO Starting stacks-api
+Jun 22 15:16:11.669 ERRO Fatal: unable to create image: Docker responded with status code 500: {"message":"Get \"https://registry-1.docker.io/v2/\": dialing registry-1.docker.io:443 no HTTPS proxy: connecting to 3.216.34.172:443: dial tcp 3.216.34.172:443: i/o timeout"}
+
+Jun 22 15:16:11.679 INFO Handling Termination command
+Jun 22 15:16:11.900 INFO Terminating bitcoin-node
+Jun 22 15:16:12.064 INFO Terminating postgres
+Jun 22 15:16:12.138 INFO Pruning network and containers
+Jun 22 15:16:12.151 INFO Artifacts (logs, conf, chainstates) available here: /Users/cryptogang/develop/git/stacks-seoul-2022-nft/.cache/stacks-devnet-1687446937
+Jun 22 15:16:12.151 INFO ⚠️  fatal error - unable to create image: Docker responded with status code 500: {"message":"Get \"https://registry-1.docker.io/v2/\": dialing registry-1.docker.io:443 no HTTPS proxy: connecting to 3.216.34.172:443: dial tcp 3.216.34.172:443: i/o timeout"}
+

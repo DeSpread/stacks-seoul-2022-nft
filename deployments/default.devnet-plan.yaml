@@ -14,21 +14,26 @@ plan:
             cost: 700
             path: contracts/external/commission-trait.clar
             anchor-block-only: true
-        - contract-publish:
-            contract-name: stacks-3ridge-seoul-meetup-2023-commission
-            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
-            cost: 740
-            path: contracts/external/stacks-3ridge-seoul-meetup-2023-commission.clar
-            anchor-block-only: true
+            clarity-version: 1
         - contract-publish:
             contract-name: nft-trait
             expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
             cost: 4670
             path: contracts/external/nft-trait.clar
             anchor-block-only: true
+            clarity-version: 1
         - contract-publish:
             contract-name: stacks-3ridge-seoul-meetup-2023
             expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
-            cost: 94850
+            cost: 97710
             path: contracts/stacks-3ridge-seoul-meetup-2023.clar
             anchor-block-only: true
+            clarity-version: 1
+        - contract-publish:
+            contract-name: stacks-seoul-meetup-2023-commission
+            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            cost: 740
+            path: contracts/external/stacks-seoul-meetup-2023-commission.clar
+            anchor-block-only: true
+            clarity-version: 1
+      epoch: "2.05"

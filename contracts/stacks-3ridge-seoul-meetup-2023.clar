@@ -7,7 +7,7 @@
 ;; Constants
 (define-constant DEPLOYER tx-sender)
 (define-constant COMM u1000)
-(define-constant COMM-ADDR 'SPBGN2NDFZ1PT6TFV6127F53KCP9HHHEB8JHYS34)
+(define-constant COMM-ADDR 'STBGN2NDFZ1PT6TFV6127F53KCP9HHHEBBV1RY6A)
 
 (define-constant ERR-NO-MORE-NFTS u100)
 (define-constant ERR-NOT-ENOUGH-PASSES u101)
@@ -28,7 +28,7 @@
 (define-data-var mint-limit uint u200)
 (define-data-var last-id uint u1)
 (define-data-var total-price uint u0000000)
-(define-data-var artist-address principal 'SPBGN2NDFZ1PT6TFV6127F53KCP9HHHEB8JHYS34)
+(define-data-var artist-address principal 'STBGN2NDFZ1PT6TFV6127F53KCP9HHHEBBV1RY6A)
 (define-data-var ipfs-root (string-ascii 80) "ipfs://Qmegbw6yrxx412hfTgPmHXNoUo1YjWvXSXAb4FahScdrRF/")
 
 (define-data-var mint-paused bool true)
@@ -45,21 +45,8 @@
 (define-public (pre-mint) 
   (begin
     (try! (mint (list true true true true true true true true true true true true true true true)))
-    (try! (trnsfr u1 DEPLOYER 'SP1997REHPBDBRRWRHCTF693SHS0TDEA6V84TKYZV))
-    (try! (trnsfr u2 DEPLOYER 'SP3B12KNF2WWXPMTY5GK3S9D8HG2W6ZG9H84NB6T4))
-    (try! (trnsfr u3 DEPLOYER 'SP1ZJHN74VH26SPHHJB4YP6NSEYVKFZD1W0ZK5K9H))
-    (try! (trnsfr u4 DEPLOYER 'SP20KFMW5NAQATXXG8MMB8ESGB33XYAEK1TBTR8J8))
-    (try! (trnsfr u5 DEPLOYER 'SP31A0B5K60KHWM3S3JD0B47TG3R43PT1KRV7V53B))
-    (try! (trnsfr u6 DEPLOYER 'SP2FYNJVHG0CJDMYCCVK4AB0WBD561TW0YP7M4PVA))
-    (try! (trnsfr u7 DEPLOYER 'SPA5RK3DBP26GHD5Z462JRME33GQWXWAVX359FAJ))
-    (try! (trnsfr u8 DEPLOYER 'SP2TSP9H8877HZX69B9JQ2EM2JP97XJNZEKJTE2ZT))
-    (try! (trnsfr u9 DEPLOYER 'SP3D4C9J5GX7WN3Z4X1SXE3A88MJYKM41YS7GHEDY))
-    (try! (trnsfr u10 DEPLOYER 'SPJ9J39D9FDFXM3FC31Z5QGC31FAEMRJ13WPXJMY))
-    (try! (trnsfr u11 DEPLOYER 'SP1VEQYSMWF1J3XV35XVCFXY8YW2E92QMPG2VT5WR))
-    (try! (trnsfr u12 DEPLOYER 'SP2YXPVMEVPGT5ZP071CCA2ZZC68EYQ72J5ES0R19))
-    (try! (trnsfr u13 DEPLOYER 'SP1CD4CH173PM3STX545S40GFNGTVQAJ85BTQEMEN))
-    (try! (trnsfr u14 DEPLOYER 'SP1BH6PQFJ69BNKM6A2MQ10V7J6PFT7JXHNDYF0WQ))
-    (try! (trnsfr u15 DEPLOYER 'SP1NGMS9Z48PRXFAG2MKBSP0PWERF07C0KV9SPJ66))
+    (try! (nft-transfer? stacks-3ridge-seoul-meetup-2023 u1 tx-sender 'ST2ST2H80NP5C9SPR4ENJ1Z9CDM9PKAJVPYWPQZ50))
+    (try! (nft-transfer? stacks-3ridge-seoul-meetup-2023 u2 tx-sender 'ST2Y2SFNVZBT8SSZ00XXKH930MCN0RFREB2GQG7CJ))
     (ok true)))
 
 (define-public (claim) 
